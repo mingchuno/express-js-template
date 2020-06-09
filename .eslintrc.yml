@@ -1,0 +1,29 @@
+env:
+  node: true
+  es6: true
+  jest/globals: true
+
+parserOptions:
+  ecmaVersion: 9
+  ecmaFeatures:
+    jsx: true
+
+extends:
+  - standard
+  - prettier
+  - prettier/standard
+  - plugin:jest/recommended
+
+plugins:
+  - jest
+  - prettier
+
+rules:
+  no-var: error
+  prettier/prettier: error
+  standard/no-callback-literal: off
+  jest/no-disabled-tests: off
+  prefer-const:
+    - error
+    - destructuring: any
+      ignoreReadBeforeAssign: false
